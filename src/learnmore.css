@@ -1,0 +1,81 @@
+/*Page Style*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.full-height {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+.header {
+    background: rgb(0,71,171,1);
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-right: 20px; 
+    text-decoration: none;
+    color: rgb(255,255,255,1);
+}
+
+/* Content */
+.content {
+    flex-grow: 1;
+    float: right;
+    width: 95%;
+}
+
+/* Footer */
+.footer {
+    background: rgb(0,71,171,1);
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    font-size: 7pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.left-image {
+    width: 30%; /* Take up half of the container width */
+    float: left; /* Float the images to the left */
+    margin-right: 20px; /* Add some spacing between the image and the content */
+}
+.right-image{
+    width: 30%; /* Take up half of the container width */
+    float: right; /* Float the images to the left */
+    margin-right: 20px; /* Add some spacing between the image and the content */
+    
+}
+
+.left-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 400px; /* Maintain aspect ratio */
+}
+.right-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 420px; /* Maintain aspect ratio */
+}
+
+.button {
+    float:right;
+    padding-right: 1px;
+    border: none;
+    color: rgb(0,71,171,1);
+    padding: 5px 20px; /* Increased padding for better clickability */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px; /* Increased font size for better visibility */
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(255,255,255,1)
+}

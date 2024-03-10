@@ -1,0 +1,60 @@
+/* Page Style */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Added font family */
+}
+
+.full-height2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.header2 {
+    background: rgb(0,71,171,1);
+    height: 30px; /* Increased height for better visibility */
+    color: white;
+    line-height: 30px; /* Adjusted line-height */
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-right: 20px; 
+    text-decoration: none;
+    color: rgb(255,255,255,1);
+}
+
+/* Content */
+.content2 {
+    flex-grow: 1;
+    display: flex; /* Ensuring content and image are aligned properly */
+    align-items: center; /* Vertically centering content */
+}
+.content2 img {
+    max-width: 100%; /* Ensuring image fits within container */
+    height: auto; /* Ensuring aspect ratio is maintained */
+    margin-right: 20px; /* Added margin for spacing */
+}
+
+/* Footer */
+.footer2 {
+    background: rgb(0,71,171,1);
+    height: 30px; /* Increased height for better visibility */
+    color: white;
+    line-height: 30px; /* Adjusted line-height */
+    font-size: 10pt; /* Increased font size for better readability */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 17px; /* Increased font size for better readability */
+    line-height: 1.6; /* Adjusted line height for better spacing */
+    color: #333;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
