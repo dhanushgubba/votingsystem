@@ -168,4 +168,4 @@ class Electionvoting extends React.Component {
     }
 }
 
-export default Electionvoting;
+export default Electionvoting
