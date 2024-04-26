@@ -5,61 +5,73 @@ html, body {
     margin: 0;
 }
 
-.full-height {
+.full-height11 {
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
-.header {
-    background: rgb(0,71,171,1);
+
+/* Header */
+.header11 {
+    background: rgba(0, 71, 171, 0.9); /* Set opacity to 0.9 */
     height: 30px;
     color: white;
     line-height: 30px;
     font-weight: bold;
-}
-
-.nav-link {
-    margin-right: 20px; 
-    text-decoration: none;
-    color: rgb(255,255,255,1);
-}
-
-/* Content */
-.content {
-    flex-grow: 1;
-    float: right;
-    width: 95%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 /* Footer */
-.footer {
-    background: rgb(0,71,171,1);
+.footer11 {
+    background: rgba(0, 71, 171, 0.9); /* Set opacity to 0.9 */
     height: 30px;
     color: white;
     line-height: 30px;
     font-size: 7pt;
     text-align: center;
     font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
+/* Content */
+.content11 {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding-top: 30px; /* Add padding to top to make space for header */
+    padding-bottom: 30px; /* Add padding to bottom to make space for footer */
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%; /* Ensure content takes up the full width */
+    background-color: skyblue;
+    height: calc(100% - 60px); /* Calculate height of content area */
+}
 
 .left-image {
-    width: 30%; /* Take up half of the container width */
-    float: left; /* Float the images to the left */
+    width: 30%; /* Take up 30% of the container width */
+    float: left; /* Float the image to the left */
     margin-right: 20px; /* Add some spacing between the image and the content */
-}
-.right-image{
-    width: 30%; /* Take up half of the container width */
-    float: right; /* Float the images to the left */
-    margin-right: 20px; /* Add some spacing between the image and the content */
-    
+    animation: scrollAnimation 5s infinite alternate; /* Apply the animation */
 }
 
-.left-image img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 400px; /* Maintain aspect ratio */
+.right-image {
+    width: 30%; /* Take up 30% of the container width */
+    float: right; /* Float the image to the right */
+    margin-right: 20px; /* Add some spacing between the image and the content */
+    animation: scrollAnimation 5s infinite alternate; /* Apply the animation */
 }
-.right-image img {
+
+@keyframes scrollAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); } /* Scroll down 20px */
+    100% { transform: translateY(0); } /* Return to original position */
+}
+
+.left-image img, .right-image img {
     width: 100%; /* Ensure the image fills the container */
-    height: 420px; /* Maintain aspect ratio */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
 }

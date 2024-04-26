@@ -3,11 +3,12 @@ import './home1.css';
 import { callApi, errorResponse, getSession, setSession } from './main';
 import { NavLink } from "react-router-dom";
 import image1 from './images/image1.jpg'
-
+import logouticon from './images/logout.png';
 const HS1 = { "paddingLeft": "5px", "marginRight": "20px" };
 const HS2 = {"float" : "right", "padding-right" : "5px", "cursor" : "pointer"};
 const HS4 = {"float" : "right", "paddingRight" : "10px"};
 const HS3 = {"width": "800px", "height": "700px", "margin": "0 auto"}; // Define HS3 style
+const HS5 = {"float" : "right", "height" : "16px", "margin-top" : "6px", "cursor" : "pointer"};
 const contentStyle1 = {"flex": 1, "padding": "10px"}; // Style for content div
 
 class Home1 extends React.Component {
@@ -43,6 +44,7 @@ class Home1 extends React.Component {
                 <div className='header2'>
                     <label style={HS1}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
                     <label style={HS2} onClick={this.logout}>Logout</label>
+                    <img src={logouticon} alt='' style={HS5} onClick={this.logout} />
                     <NavLink to="/home1" className="nav-link">Home</NavLink>
                     <NavLink to="/about1" className="nav-link">About</NavLink>
                     <NavLink to="/voter" className="nav-link">Voter Registration</NavLink>

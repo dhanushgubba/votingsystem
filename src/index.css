@@ -1,95 +1,113 @@
 /*Page Style*/
-html, body{
+html, body {
   width: 100%;
   height: 100%;
-  margin:0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 9pt;
+  font-size: 10pt; /* Increased font size for better readability */
 }
 
-.full-height{
+.full-height {
   width: 100%;
   height: 100%;
 }
 
-:focus{
+:focus {
   outline: none;
 }
 
-/*Login Page*/
-.loginheader{
-  background: rgb(220, 2, 2);
-  height:30px;
+/* Login Page */
+.loginheader {
+  background: rgb(38, 2, 220);
+  height: 40px; /* Increased header height for better visibility */
   color: white;
-  line-height: 30px;
+  line-height: 40px; /* Adjusted line height for better alignment */
   font-weight: bold;
-  font-size: 12pt;
+  font-size: 14pt; /* Increased font size for better visibility */
 }
 
-.logincontent{
+.logincontent {
   flex-grow: 1;
   background: url('images/image.jpg');
-  height: calc(100% - 60px);
-  background-size: 100% 100%;
+  height: calc(100% - 70px); /* Adjusted height for header and footer */
+  background-size: cover; /* Ensure the background image covers the entire content area */
+  background-position: center; /* Center the background image */
 }
 
-.loginfooter{
-  background: rgb(220, 2, 2);
-  height: 30px;
+.loginfooter {
+  background: rgb(38, 2, 220);
+  height: 40px; /* Increased footer height for better visibility */
   color: white;
-  line-height: 30px;
-  font-size: 7pt;
+  line-height: 40px; /* Adjusted line height for better alignment */
+  font-size: 8pt; /* Increased font size for better readability */
   text-align: center;
 }
 
-.popup{
-  width:100%;
+.popup {
+  width: 100%;
   height: 100%;
-  background: rgb(0,0,0, 0.50);
+  background: rgba(0, 0, 0, 0.5); /* Adjusted background color for better transparency */
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
   display: none;
+  z-index: 999; /* Ensure the popup stays on top of other content */
 }
 
-.popupwindow{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 10px;
-    transform: translate(-50%, -50%);
+.popupwindow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px; /* Increased padding for better spacing */
+  background: white; /* Changed background color to white for better visibility */
+  border-radius: 5px; /* Added border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow for depth */
 }
 
-.loginstyle1{
-  height: 30px;
-  line-height: 30px;
-  font-size: 12pt;
+.loginstyle1 {
+  height: 40px; /* Increased input height for better visibility */
+  line-height: 40px;
+  font-size: 14pt; /* Increased font size for better visibility */
   font-weight: bold;
 }
 
-.loginstyle2{
+.loginstyle2 {
   position: relative;
-  height: 400px;
-  padding: 10px;
-  background: whitesmoke;
+  height: 450px; /* Increased height for better spacing */
+  padding: 20px; /* Increased padding for better spacing */
+  background: #f5f5f5; /* Changed background color to a lighter shade */
+  border-radius: 5px; /* Added border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
 }
 
-.txtbox{
-  width: 100%;
-  height: 30px;
-  font-size: 10pt;
-  border: 1px solid silver;
-  border-radius: 3px;
+.txtbox {
+  height: 35px; /* Keep the input height */
+  font-size: 11pt; /* Keep the font size */
+  border: 0.5px solid silver; /* Keep the border */
+  border-radius: 2px;
+  padding: 0 4px; /* Reduce the padding for better fit */
 }
 
-.btn{
+
+.btn {
   width: 100%;
-  height: 35px;
-  background: rgb(220, 2, 2);
+  height: 40px; /* Increased button height for better visibility */
+  background: rgb(38, 2, 220);
   color: white;
-  border: 1px solid silver;
+  border: none;
   border-radius: 3px;
   cursor: pointer;
+  font-size: 12pt; /* Increased font size for better visibility */
+  transition: background-color 0.3s; /* Added transition for smoother hover effect */
 }
 
-.linklabel{
+.btn:hover {
+  background-color: rgb(18, 1, 133); /* Darker background color on hover */
+}
+
+.linklabel {
   color: dodgerblue;
   cursor: pointer;
+  font-weight: bold; /* Added font weight for better emphasis */
 }

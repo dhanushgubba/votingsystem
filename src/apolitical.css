@@ -1,19 +1,5 @@
-/* Global Styles */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-/* Page Structure */
-.full-height5 {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-}
-
 /* Header Styles */
-.header5 {
+.header24 {
     background: rgb(0,71,171,1);
     height: 30px;
     color: white;
@@ -28,7 +14,7 @@ html, body {
 }
 
 /* Content Section */
-.content5 {
+.content24 {
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -36,7 +22,8 @@ html, body {
 }
 
 /* Footer Styles */
-.footer5 {
+.footer24
+ {
     background: rgb(0,71,171,1);
     height: 30px;
     color: white;
@@ -74,4 +61,3 @@ html, body {
     max-width: 80px; /* Adjust the width as needed */
     max-height:60px; /* Adjust the height as needed */
 }
-

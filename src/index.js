@@ -12,6 +12,15 @@ import About1 from './about1';
 import Voter from './voter';
 import PoliticalParties from './politicalparties';
 import ChangePassword from './changepassword';
+import Admin from './admin';
+import Voterregistration from './voterregistration';
+import CandidateVote from './candidatevote';
+import Electionvoting from './electionvoting';
+import Home2 from './home2';
+import Candidates from './candidates';
+import Apolitical from './apolitical';
+import Help from './help';
+
 function Website(){
   return(
     <BrowserRouter>
@@ -27,6 +36,14 @@ function Website(){
         <Route path='/voter' element={<Voter/>} />
         <Route path='/politicalparties' element={<PoliticalParties/>} />
         <Route path='/changepassword' element={<ChangePassword/>} />
+        <Route path='/admin' element={<Admin/>} />
+        <Route path='/voterregistration' element={<Voterregistration/>} />
+        <Route path='/candidatevote' element={<CandidateVote/>} />
+        <Route path='/electionvoting' element={<Electionvoting/>} />
+        <Route path='/home2' element={<Home2/>} />
+        <Route path='/candidates' element={<Candidates/>} />
+        <Route path='/apolitical' element={<Apolitical/>} />
+        <Route path='/help' element={<Help/>} />
       </Routes>
     </BrowserRouter>
 

@@ -1,23 +1,40 @@
-/* Page Style */
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif; /* Added font family */
 }
 
-.full-height {
+.full-height{
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
-
+/* Header */
 .header {
     background: rgb(0,71,171,1);
-    height: 50px; /* Increased height for better visibility */
+    height: 20px; /* Decreased header height */
     color: white;
-    line-height: 50px; /* Adjusted line-height */
+    line-height: 20px; /* Adjusted line height */
     font-weight: bold;
+    position: fixed; /* Fixed positioning to keep header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: rgb(0,71,171,1);
+    height: 10px; /* Decreased footer height */
+    color: white;
+    line-height: 15px; /* Adjusted line height */
+    font-size: 7pt;
+    text-align: center;
+    font-weight: bold;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .nav-link {
@@ -28,9 +45,11 @@ html, body {
 
 /* Content */
 .content {
-    flex-grow: 1;
-    display: flex; /* Ensuring content and image are aligned properly */
-    align-items: center; /* Vertically centering content */
+    flex-grow: 1; 
+    align-items: center;
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 80%; /* Ensure content takes up the full width */
+    height: calc(100% - 60px); /* aCalculate height of content area */
 }
 .content img {
     max-width: 100%; /* Ensuring image fits within container */
@@ -38,33 +57,37 @@ html, body {
     margin-right: 20px; /* Added margin for spacing */
 }
 
-/* Footer */
-.footer {
-    background: rgb(0,71,171,1);
-    height: 50px; /* Increased height for better visibility */
-    color: white;
-    line-height: 50px; /* Adjusted line-height */
-    font-size: 10pt; /* Increased font size for better readability */
-    text-align: center;
-    font-weight: bold;
-}
-
-.button {
+.button{
     float:right;
     padding-right: 1px;
-    border: none;
+    border: 1px;
     color: rgb(0,71,171,1);
     padding: 5px 20px; /* Increased padding for better clickability */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px; /* Increased font size for better visibility */
+    font-size: 20px; /* Increased font size for better visibility */
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(242, 22, 22)
+}
+
+.button1{
+    float:right;
+    margin-right: 10px;
+    padding-right: 1px;
+    border: 1px;
+    color: #0047ab;
+    padding: 5px 20px; /* Increased padding for better clickability */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px; /* Increased font size for better visibility */
     cursor: pointer;
 }
 
-
-
-.button:hover {
+.button1:hover {
     background-color: rgb(255,255,255,1)
 }
 
@@ -75,16 +98,7 @@ p {
     color: #333;
     margin-bottom: 30px; /* Increased margin for better spacing */
 }
-/* Footer */
-.footer {
-    background: rgb(0,71,171,1);
-    height: 50px; /* Increased height for better visibility */
-    color: white;
-    line-height: 50px; /* Adjusted line-height */
-    font-size: 10pt; /* Increased font size for better readability */
-    text-align: center;
-    font-weight: bold;
-}
+
 
 .btn {
     float: left;
@@ -95,10 +109,24 @@ p {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px; /* Increased font size for better visibility */
+    font-size: 15px; /* Increased font size for better visibility */
     cursor: pointer;
 }
 
 .btn:hover {
     background-color: rgb(171 ,0,17)
 }
+
+.multi-color-text {
+    background: linear-gradient(to right, #dc0a11, #4e0ad6, #0ee636, #ff9a9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text 3s ease infinite;
+}
+
+@keyframes rainbow-text {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+

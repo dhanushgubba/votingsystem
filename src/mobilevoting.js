@@ -3,9 +3,9 @@ import './mobilevoting.css';
 import { NavLink } from "react-router-dom";
 import image6 from './images/image6.jpg'; // Import left image
 import image7 from './images/image7.jpg';
-import image9 from './images/image9.jpg';
+/*import image9 from './images/image9.jpg';
 import image10 from './images/image10.jpg';
-import image11 from './images/image11.jpg';
+import image11 from './images/image11.jpg';*/
 const HS1 = { "paddingLeft": "5px", "marginRight": "20px" };
 const HS4 = {"float" : "right", "paddingRight" : "10px"};
 
@@ -13,18 +13,17 @@ class Mobilevoting extends React.Component {
     
     render() {
         return (
-            <div className='full-height'>
-                <div className='header'>
+            <div className='full-height9'>
+                <div className='header9'>
                     <label style={HS1}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
                     <NavLink to="/" className="nav-link">Home</NavLink>
                     <NavLink to="/about" className="nav-link">About</NavLink>
                     <NavLink to="/mobile" className="nav-link">Mobile Voting</NavLink>
                     <NavLink to="/contact" className="nav-link">Contact us</NavLink>
-                    <NavLink to="/help" className="nav-link">Help/Support</NavLink>
                     <label id='HL1' style={HS4}></label>
-                    <div id="header"></div>
+                    <div id="header9"></div>
                 </div>
-                <div className='content'>
+                <div className='content9'>
                     <div className="about-container">
                         <div className="content-text">   
                             <center>
@@ -48,7 +47,7 @@ class Mobilevoting extends React.Component {
                             <h2>3.Flexibility:</h2>
                             <p>With mobile voting, voters have the flexibility to cast their votes at any time during the election period, 24 hours a day. There's no need to wait in lines or for polling booths to open.
                             The process of mobile voting is straightforward, transparent, and secure. It offers cost and time efficiency compared to traditional voting methods.</p>
-                            <center>
+                            {/*<center>
                                 <h1>Steps in Mobile Voting:</h1>
                             </center>
                             <div className="left-image">
@@ -63,13 +62,13 @@ class Mobilevoting extends React.Component {
                             </div>
                             <div className="left-image">
                                 <img src={image11} alt="" />
-                            </div>
+                            </div>*/}
 
                         
                         </div>  
                     </div>
                 </div>
-                <div className='footer'>
+                <div className='footer9'>
                     Copyright © 2024, eBallot.
                 </div>
             </div>

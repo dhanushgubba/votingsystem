@@ -6,13 +6,13 @@ html, body {
     font-family: Arial, sans-serif; /* Added font family */
 }
 
-.full-height2 {
+.full-height23{
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
 
-.header2 {
+.header23 {
     background: rgb(0,71,171,1);
     height: 30px; /* Increased height for better visibility */
     color: white;
@@ -28,21 +28,17 @@ html, body {
 }
 
 /* Content */
-.content2 {
-    flex-grow: 1;
-    display: flex; /* Ensuring content and image are aligned properly */
-    align-items: center; /* Vertically centering content */
-}
-.content2 img {
-    max-width: 100%; /* Ensuring image fits within container */
-    height: auto; /* Ensuring aspect ratio is maintained */
-    margin-right: 20px; /* Added margin for spacing */
-    
+.content23 {
+    display: flex; /* Set display to flex for flexbox layout */
+    align-items: center;
+    justify-content: left;
 }
 
+
+
 /* Footer */
-.footer2 {
-    background: rgb(0,71,171,1);
+.footer23 {
+    background: rgb(0, 71, 171, 1);
     height: 30px; /* Increased height for better visibility */
     color: white;
     line-height: 30px; /* Adjusted line-height */
@@ -54,13 +50,28 @@ html, body {
     left: 0;
     width: 100%;
 }
+/* candidates.css */
 
-
-/* Paragraph Styles */
-p {
-    font-size: 17px; /* Increased font size for better readability */
-    line-height: 1.6; /* Adjusted line height for better spacing */
-    color: #333;
-    margin-bottom: 30px; /* Increased margin for better spacing */
-}
-
+.candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .candidates-table th, .candidates-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .candidates-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .candidates-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .candidates-table tr:hover {
+    background-color: #ddd;
+  }
+  

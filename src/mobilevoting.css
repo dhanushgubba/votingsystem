@@ -2,15 +2,15 @@
 html, body {
     width: 100%;
     height: 100%;
-    margin: 0;
 }
 
-.full-height {
+.full-height9 {
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
-.header {
+
+.header9 {
     background: rgb(0,71,171,1);
     height: 30px;
     color: white;
@@ -24,58 +24,49 @@ html, body {
     color: rgb(255,255,255,1);
 }
 
-/* Content */
-.content {
+.content9 {
     flex-grow: 1;
-    float: right;
-    width: 95%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px; /* Add padding for spacing */
+    background-color: skyblue;
 }
 
-/* Footer */
-.footer {
-    background: rgb(0,71,171,1);
-    height: 30px;
-    color: white;
-    line-height: 30px;
-    font-size: 7pt;
-    text-align: center;
-    font-weight: bold;
+.about-container {
+    display: flex; /* Display flex for layout control */
+    flex-direction: column; /* Align content in a column */
+    align-items: center; /* Center content horizontally */
 }
 
-
-.left-image {
-    width: 30%; /* Take up half of the container width */
-    float: left; /* Float the images to the left */
-    margin-right: 20px; /* Add some spacing between the image and the content */
-}
-.right-image{
-    width: 30%; /* Take up half of the container width */
-    float: right; /* Float the images to the left */
-    margin-right: 20px; /* Add some spacing between the image and the content */
-    
+.content-text {
+    max-width: 800px; /* Limit text width for better readability */
+    text-align: justify; /* Justify text for a clean appearance */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
 }
 
-.left-image img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 400px; /* Maintain aspect ratio */
+.right-image {
+    width: 100%; /* Take up full width */
+    margin-bottom: 20px; /* Add spacing between images */
 }
+
 .right-image img {
     width: 100%; /* Ensure the image fills the container */
-    height: 420px; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border radius for a softer appearance */
 }
 
-.button {
-    float:right;
-    padding-right: 1px;
-    border: none;
-    color: rgb(0,71,171,1);
-    padding: 5px 20px; /* Increased padding for better clickability */
+.footer9 {
+    background: rgb(0,71,171,1);
+    height: 30px; /* Increased height for better visibility */
+    color: white;
+    line-height: 30px; /* Adjusted line-height */
+    font-size: 10pt; /* Increased font size for better readability */
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px; /* Increased font size for better visibility */
-    cursor: pointer;
-}
-.button:hover {
-    background-color: rgb(255,255,255,1)
+    font-weight: bold;
+    position: fixed; /* Fixed positioning to keep footer at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

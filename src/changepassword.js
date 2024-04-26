@@ -2,10 +2,11 @@ import React from 'react';
 import './changepassword.css';
 import { NavLink } from "react-router-dom";
 import { callApi, errorResponse, getSession, setSession } from './main';
+import logouticon from './images/logout.png';
 const HS1 = { "paddingLeft": "5px", "marginRight": "20px" };
 const HS2 = {"float" : "right", "padding-right" : "5px", "cursor" : "pointer"};
+const HS3 = {"float" : "right", "height" : "16px", "margin-top" : "6px", "cursor" : "pointer"};
 const HS4 = {"float" : "right", "paddingRight" : "10px"};
-
 export function updatePwd()
 {
     var uname = getSession("sid");
@@ -84,6 +85,7 @@ class ChangePassword extends React.Component
                 <div className='header6'>
                     <label style={HS1}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
                     <label style={HS2} onClick={this.logout}>Logout</label>
+                    <img src={logouticon} alt='' style={HS3} onClick={this.logout} />
                     <NavLink to="/home1" className="nav-link">Home</NavLink>
                     <NavLink to="/about1" className="nav-link">About</NavLink>
                     <NavLink to="/voter" className="nav-link">Voter Registration</NavLink>
@@ -93,7 +95,7 @@ class ChangePassword extends React.Component
                     <div id="header"></div>
                 </div>
                 <div className='cpcontent'>
-                    <div className='content9'>
+                    <div className='content6'>
                     <h3>Change Your Password</h3>
                     <table>
                     <tr>
@@ -108,8 +110,15 @@ class ChangePassword extends React.Component
                     </table>
                     <button className='button7' onClick={updatePwd}>Update</button>
                 </div>
-                </div>
             </div>
+            <div className='footer6'>
+                    Copyright@Online Voting.All rights reserved
+                </div>
+
+
+        </div>
+            
+            
         );
     }
 }

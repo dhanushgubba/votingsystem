@@ -199,7 +199,11 @@ function Login(){
     }
     return(
         <div className='full-height'>
-            <div id='header' className='loginheader'>VOTING SYSTEM</div>
+            <div id='header' className='loginheader'>
+                <center>
+                    VOTING SYSTEM
+                </center>
+            </div>
             <div id='content' className='logincontent'>
                 <div id='login' className='popup'>
                     <div id='popupwindow' className='popupwindow' style={popupwindowstyle} >

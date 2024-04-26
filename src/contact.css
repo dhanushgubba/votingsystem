@@ -4,19 +4,49 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
-.full-height {
+.full-height10{
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
 }
-
-.header {
+/* Header */
+.header10 {
     background: rgb(0,71,171,1);
     height: 30px;
     color: white;
     line-height: 30px;
     font-weight: bold;
+    position: fixed; /* Fixed positioning to keep header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer */
+.footer10 {
+    background: rgb(0,71,171,1);
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    font-size: 7pt;
+    text-align: center;
+    font-weight: bold;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Add this CSS to position the content below the header */
+.content10 {
+    overflow-y: auto;
+    padding-top: 60px; /* Adjust this value to match the height of your header */
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    height: calc(100% - 90px); /* Adjust this value based on the header and footer heights */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
 .nav-link {
@@ -25,13 +55,6 @@ html, body {
     color: rgb(255,255,255,1);
 }
 
-/* Content */
-.content {
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 .contentstyle {
     width: 80%; /* Adjust width as needed */
@@ -66,13 +89,3 @@ html, body {
     border-radius: 3px;
 }
 
-/* Footer */
-.footer {
-    background: rgb(0,71,171,1);
-    height: 30px;
-    color: white;
-    line-height: 30px;
-    font-size: 7pt;
-    text-align: center;
-    font-weight: bold;
-}

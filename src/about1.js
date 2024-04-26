@@ -4,9 +4,10 @@ import { callApi, errorResponse, getSession, setSession } from './main';
 import { NavLink } from "react-router-dom";
 import image4 from './images/image4.jpg'; // Import left image
 import image5 from './images/image5.jpg'; // Import right image
-
+import logouticon from './images/logout.png';
 const HS1 = { "paddingLeft": "5px", "marginRight": "20px" };
 const HS2 = {"float" : "right", "padding-right" : "5px", "cursor" : "pointer"};
+const HS3 = {"float" : "right", "height" : "16px", "margin-top" : "6px", "cursor" : "pointer"};
 const HS4 = {"float" : "right", "paddingRight" : "10px"};
 const contentStyle1 = {"flex": 1, "padding": "10px"}; // Style for content div
 
@@ -43,6 +44,7 @@ class About1 extends React.Component {
                 <div className='header3'>
                     <label style={HS1}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
                     <label style={HS2} onClick={this.logout}>Logout</label>
+                    <img src={logouticon} alt='' style={HS3} onClick={this.logout} />
                     <NavLink to="/home1" className="nav-link">Home</NavLink>
                     <NavLink to="/about1" className="nav-link">About</NavLink>
                     <NavLink to="/voter" className="nav-link">Voter Registration</NavLink>
@@ -72,9 +74,9 @@ class About1 extends React.Component {
                             <center>
                                 <h1>Get involved</h1>
                             </center>
-                            <p>Join us in our mission to modernize elections and promote democratic participation. Whether you're a voter, election administrator, or technologist, there are opportunities to get involved and contribute to the success of OVMS. Contact us to learn more about partnership opportunities, volunteer programs, or career opportunities with OVMS.</p>
+                            <p>Join us in our mission to modernize elections and promote democratic participation. Whether you're a voter, election administrator, or technologist, there are opportunities to get involved and contribute to the success of OVMS. Contact us to learn more about partnership opportunities, volunteer programs, or career opportunities with OVMS.To ensure that Online voting platform is used during the 2024 Indian Andhra Pradesh to provide Right to Vote to all citizens of India including soldiers, NRIs, migrants and other sections who are denied Right to Vote due to booth based voting.</p>
                             
-                            <div className="left-image3">
+                            {/*<div className="left-image3">
                                 <img src={image5} alt="VOTING SYSTEM" />
                             </div>
                             <center>
@@ -92,12 +94,12 @@ class About1 extends React.Component {
                             <center>
                                 <h1>Contact Us</h1>
                             </center>
-                            <p>For inquiries, feedback, or support, please contact our team at contact@ovms.com. We welcome your questions and suggestions as we work together to build a better future for democratic elections.</p>
-                         </div>
+                            <p>For inquiries, feedback, or support, please contact our team at contact@ovms.com. We welcome your questions and suggestions as we work together to build a better future for democratic elections.</p>*/}
+                        </div>
                         </div>
                     </div>
                 </div>
-                <div className='footer2'>
+                <div className='footer3'>
                     Copyright © 2024, eBallot.
                 </div>
             </div>

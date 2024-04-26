@@ -1,5 +1,5 @@
-import React from "react";
-import './politicalparties.css';
+import React from 'react';
+import './apolitical.css';
 import { callApi, errorResponse, getSession, setSession } from './main';
 import { NavLink } from "react-router-dom";
 import tdpImage from './images/tdp.jpg';
@@ -7,55 +7,73 @@ import ysrcpImage from './images/ysrcp.jpg';
 import janasenaImage from './images/janasena.jpg';
 import bjpImage from './images/bjp.jpg';
 import cpiImage from './images/cpi.jpg';
-import incImage from './images/inc.jpg';
+import notaImage from './images/nota.png';
 import logouticon from './images/logout.png';
-const HS1 = { "paddingLeft": "5px", "marginRight": "20px" };
-const HS2 = {"float" : "right", "padding-right" : "5px", "cursor" : "pointer"};
-const HS3 = {"float" : "right", "height" : "16px", "margin-top" : "6px", "cursor" : "pointer"};
-const HS4 = {"float" : "right", "paddingRight" : "10px"};
 
-class PoliticalParties extends React.Component {
+class Apolitical extends React.Component {
     constructor() {
         super();
+        this.state = {
+            uname: "", // Initialize uname state
+            voters: [] // Initialize voters state to store voter data
+        };
         this.sid = getSession("sid");
-        if(this.sid === "")
+        if (this.sid === "")
             window.location.replace("/");
 
         var url = "http://localhost:5000/home/uname";
         var data = JSON.stringify({
-            emailid : this.sid
+            emailid: this.sid
         });
-        callApi("POST", url, data, this.loadUname, errorResponse);
+        callApi("POST", url, data, this.loadUname.bind(this), errorResponse);
+
     }
 
     loadUname(res) {
         var data = JSON.parse(res);
-        var HL1 = document.getElementById("HL1");
-        HL1.innerText = `${data[0].firstname} ${data[0].lastname}`
+        var uname = `${data[0].firstname} ${data[0].lastname}`;
+        this.setState({ uname }); 
     }
 
     logout() {
         setSession("sid", "", -1);
         window.location.replace("/");
     }
+    submitParty(partyName) {
+        // Check if the user has already voted for this party
+        if (this.state.votedParties.includes(partyName)) {
+            alert("You have already voted for this party.");
+            return;
+        }
 
+        var url = "http://localhost:5000/voting/vote";
+        var data = JSON.stringify({
+            emailid: this.sid,
+            party: partyName
+        });
+        callApi("POST", url, data, this.handlePartyResponse.bind(this, partyName), errorResponse);
+    }
+
+    handlePartyResponse(partyName, response) {
+        const updatedVotedParties = [...this.state.votedParties, partyName];
+        this.setState({ message: "Voting submitted successfully.", showPartyList: true, hasVoted: true, votedParties: updatedVotedParties });
+    }
     render() {
         return (
-            <div className='full-height5'>
-                <div className='header5'>
-                    <label style={HS1}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
-                    <label style={HS2} onClick={this.logout}>Logout</label>
-                    <img src={logouticon} alt='' style={HS3} onClick={this.logout} />
-                    <NavLink to="/home1" className="nav-link">Home</NavLink>
-                    <NavLink to="/about1" className="nav-link">About</NavLink>
-                    <NavLink to="/voter" className="nav-link">Voter Registration</NavLink>
-                    <NavLink to="/politicalparties" className="nav-link">Political Parties</NavLink>
-                    <NavLink to="/changepassword" className="nav-link">Change Password</NavLink>
-                    <label id='HL1' style={HS4}></label>
+            <div className='full-height24'>
+                <div className='header24'>
+                    <label style={{ "paddingLeft": "5px", "marginRight": "20px" }}>eBallot | ONLINE VOTING MANAGEMENT SYSTEM</label>
+                    <label style={{ "float": "right", "paddingRight": "10px" }} onClick={this.logout}>Logout</label>
+                    <img src={logouticon} alt='' style={{ "float": "right", "height": "16px", "marginTop": "6px", "cursor": "pointer" }} onClick={this.logout} />
+                    <NavLink to="/home2" className="nav-link">Home</NavLink>
+                    <NavLink to="/candidates" className="nav-link">Candidates</NavLink>
+                    <NavLink to="/apolitical" className="nav-link">Apolitical</NavLink>
+                    <NavLink to="/help" className="nav-link">Help</NavLink>
+                    <label id='HL1' style={{ "float": "right", "paddingRight": "10px" }}>{this.state.uname}</label>
                     <div id="header"></div>
                 </div>
-                <div className='content5' style={{display: 'flex'}}> 
-                    <div>
+                <div className='content24'>
+                <div>
                         <center>
                             <h2>POLITICAL PARTIES</h2>
                         </center>
@@ -79,9 +97,11 @@ class PoliticalParties extends React.Component {
                                         <td>TELUGU DESAM </td>
                                         <td>CHANDRABABU NAIDU</td>
                                         <td>CYCLE</td>
-                                        <td><img src={tdpImage} alt="Description of image" /></td>
-                                    </tr>
+                                        {/*eslint-disable-next-line*/}
+                                        <img src={tdpImage} alt={"Description of image"} />
 
+                                    </tr>
+                                    
                                     {/* Repeat this structure for each party */}
                                     <tr>
                                         <td>2</td>
@@ -113,10 +133,10 @@ class PoliticalParties extends React.Component {
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td>CPI (Communist Party Of India)</td>
-                                        <td>RAKESH YADAV</td>
-                                        <td>CPI(Marxist)</td>
-                                        <td><img src={incImage} alt="" /></td>
+                                        <td>NOTA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><img src={notaImage} alt="None of the Above" /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -124,12 +144,12 @@ class PoliticalParties extends React.Component {
                     </div>
                     </div>
                 </div>
-                <div className='footer5'>
-                    Copyright © Online Voting 2024, eBallot.
+                <div className='footer24'>
+                    Copyright © 2024, eBallot.
                 </div>
             </div>
         );
     }
 }
 
-export default PoliticalParties;
+export default Apolitical;
