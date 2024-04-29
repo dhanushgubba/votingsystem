@@ -74,12 +74,14 @@ class PoliticalParties extends React.Component {
                                 </thead>
                                 <tbody>
                                     {/* Example of a single party */}
+                                    
                                     <tr>
                                         <td>1</td>
                                         <td>TELUGU DESAM </td>
                                         <td>CHANDRABABU NAIDU</td>
                                         <td>CYCLE</td>
-                                        <td><img src={tdpImage} alt="Description of image" /></td>
+                                        <td><img src={tdpImage} /></td>
+                                        
                                     </tr>
 
                                     {/* Repeat this structure for each party */}

@@ -28,7 +28,8 @@ app.use(authentication);
 
 
 //Configuration (MONGODB)
-var curl = "mongodb://localhost:27017";
+var curl = "mongodb+srv://dhanush:dhanush@cluster1.jcqgvpx.mongodb.net/votingsystem"
+//var curl = "mongodb://localhost:27017";
 var client = new MongoClient(curl); 
 
 //TESTING
@@ -294,6 +295,3 @@ app.post('/candidates/add', async function(req, res){
         res.json(err).status(404);
     }
 });
-
-
-

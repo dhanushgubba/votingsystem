@@ -34,7 +34,7 @@ class Candidates extends React.Component {
         window.location.replace("/");
     }
 
-  
+
     
     render() {
         return (
@@ -84,6 +84,7 @@ class Candidates extends React.Component {
                                     <button onClick={() => this.addCandidateToDatabase()}>Add to Database</button>
                                 </td> 
                             </tr>
+                            {/* Render other candidate details */}
                             <tr>
                                 <td>2</td>
                                 <td>Yasaswi</td>

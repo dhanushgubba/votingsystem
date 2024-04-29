@@ -17,7 +17,6 @@ export function callApi(method, url, data, callbacksuccess, callbackerror)
         }
     };
 }
-
 export function errorResponse(res)
 {
     alert(res);
