@@ -161,9 +161,9 @@ function Admin(){
                             <div>New user? <label className='linklabel' onClick={adminregistration}>Register here</label></div>
                             <div style={space}></div>
                             <div style={space}></div>
-                            <div>Forgot Password? <label className='linklabel' onClick={adminregistration}>Forgot Password</label></div>
+                            {/*<div>Forgot Password? <label className='linklabel' onClick={adminregistration}>Forgot Password</label></div>
                             <div style={space}></div>
-                            <div style={space}></div>
+                            <div style={space}></div>*/}
                             <div>Back to Home? <label className='linklabel' onClick={backtohome}>Back to Home</label></div>
                         </div>
                     </div>
